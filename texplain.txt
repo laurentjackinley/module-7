@@ -1,0 +1,26 @@
+extraLargeArray
+insert  2. 555971 s
+append 10.5421 ms
+
+tinyArray
+insert 206.1 us
+append 446.8 us
+
+smallArray
+insert 241 us
+append 477 us
+
+mediumArray
+insert 621.7 us
+append 401.7 us
+
+largeArray
+insert 42.2077 ms
+append 2.646 ms
+
+	As the functions getting bigger I notice that the insert keep increasing, and it is the same with the append time but at some point from the smallArray to the
+ mediumArray I see that the append time actually decrease to over 70 micro second instead of increasing. I think that the doublerAppend function scale better than the 
+doublerInsert, because as the array getting bigger I notice that the Append function time to run does not increase as fast as the Insert one does and we can see the
+difference from largeArray to extraLargeArray.
+The reason why the doublerInsert function is slower is because everytime the function run because of the unshift which will add it at the beginning of the array
+it will have to move everything in the array to place it at the beginning.
